@@ -4,7 +4,7 @@
     <?php 
         if(isset($_POST['post_search'])) {
             $search_text = $_POST['post_search_text'];
-
+            
         }
     
     ?>

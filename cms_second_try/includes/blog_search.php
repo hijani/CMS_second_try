@@ -2,7 +2,9 @@
     <h4>Blog Search</h4>
 
     <?php 
-
+        if(isset($_POST['post_search'])) {
+            $search_term = $_POST['post_search'];
+        }
     
     ?>
     <form action="" method="post">

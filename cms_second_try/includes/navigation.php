@@ -14,6 +14,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
 
+                    <?php 
+                    
+                        $query = "SELECT * FROM categories";
+                        $categories_connection = mysqli_query($connection, $query);
+                    
+                    ?>
                     <li>
                         <a href="#">About</a>
                     </li>

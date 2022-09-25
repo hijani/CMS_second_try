@@ -20,7 +20,7 @@
                 <?php include "includes/blog_search.php"; ?>
 
                 <!-- Blog Categories Well -->
-                
+                <?php include "includes/categories.php"; ?>
 
                 <!-- Side Widget Well -->
                 <div class="well">

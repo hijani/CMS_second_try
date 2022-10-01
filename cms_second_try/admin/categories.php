@@ -53,32 +53,9 @@
                             </tr>
                                 <?php 
                                 
-                                    $query = "SELECT * FROM categories";
-                                    $category_query = mysqli_query($connection, $query);
+                                    show_category();
 
-                                    if(!$category_query) {
-                                        die("Query Failed" . mysqli_error($connection));
-                                    }
-
-                                    while ($row = mysqli_fetch_assoc($category_query)) {
-                                        $cat_id = $row['cat_id'];
-                                        $cat_title = $row['cat_title'];
-
-                                        echo "<tr>";
-                                        echo "<td>$cat_id</td>";
-                                        echo "<td>$cat_title</td>";
-                                        echo "<td><a href='categories.php?edit=$cat_id'>Edit</a></td>";
-                                        echo "<td><a href='categories.php?delete=$cat_id'>Delete</a></td>";
-                                        echo "</tr>";
-
-                                    }
-
-                                    if(isset($_GET['delete'])) {
-                                        $cat_id = $_GET['delete'];
-                                        $query = "DELETE FROM categories WHERE cat_id='$cat_id'";
-                                        $delete_query = mysqli_query($connection, $query);
-                                        header("Location: categories.php");
-                                    }
+                                    delete_category();
                                 
                                 ?>
                         </table>

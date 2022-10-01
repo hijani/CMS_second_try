@@ -39,6 +39,13 @@
                             </div>
                             <button type="submit" name="add_category" class="btn btn-primary">Add Category</button>
                         </form>
+
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <input type="text" name="category_name" class="form-control" placeholder="Category Name">
+                            </div>
+                            <button type="submit" name="update_category" class="btn btn-primary">Update Category</button>
+                        </form>
                     </div>
                     <div class="col-md-8">
                         <table class="table">

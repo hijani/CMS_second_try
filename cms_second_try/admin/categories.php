@@ -24,7 +24,9 @@
                         </h1>
                     </div>
                     <div class="col-md-4">
-                        <?php add_category(); ?>
+                        <?php 
+                            add_category();
+                        ?>
                         <form action="" method="post">
                             <div class="form-group">
                                 <input type="text" name="category_name" class="form-control" placeholder="Category Name">
@@ -34,17 +36,8 @@
 
                         <hr>
 
-                        <?php 
-                        
-                            if(isset($_POST['update_category'])) {
-                                $cat_id = $_GET['edit'];
-                                $category_content = $_POST['category_name'];
-                                
-                                $query = "UPDATE categories SET cat_title = '$category_content' ";
-                                $query .= "WHERE cat_id = $cat_id ";
-                                $update_category_query = mysqli_query($connection, $query);
-                            }
-                        
+                        <?php
+                            update_category();
                         ?>
 
                         <?php 

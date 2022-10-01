@@ -4,7 +4,7 @@
             <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
         </li>
         <li>
-            <a href="categories.php"><i class="fa fa-fw fa-table"></i> Categories</a>
+            <a href="categories.php"><i class="fa fa-list fa-list-alt"></i> Categories</a>
         </li>
         <li>
             <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>

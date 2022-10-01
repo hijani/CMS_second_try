@@ -36,7 +36,6 @@
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
-                            <tr>
 
                                 <?php 
                                 
@@ -51,17 +50,18 @@
                                         $cat_id = $row['cat_id'];
                                         $cat_title = $row['cat_title'];
 
+                                        echo "<tr>";
                                         echo "<td>$cat_id</td>";
                                         echo "<td>$cat_title</td>";
                                         echo "<td><a href='#'>Edit</a></td>";
                                         echo "<td><a href='#'>Delete</a></td>";
+                                        echo "</tr>";
 
 
                                     }
                                 
                                 ?>
 
-                            </tr>
                         </table>
                     </div>
                 </div>

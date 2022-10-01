@@ -23,7 +23,20 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        
+                        <table class="table">
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <!-- /.row -->

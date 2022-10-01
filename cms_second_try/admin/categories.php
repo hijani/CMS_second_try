@@ -66,12 +66,13 @@
         
                                         while($row = mysqli_fetch_assoc($edit_category_query)) {
                                             $cat_title = $row['cat_title'];
+                                        }
+                                    }
                                         
                                 ?>
                                 
                                 <input type="text" value="<?php echo $cat_title; ?>" name="category_name" class="form-control" placeholder="Category Name">
 
-                                <?php } } ?>
                             </div>
                             <button type="submit" name="update_category" class="btn btn-primary">Update Category</button>
                         </form>

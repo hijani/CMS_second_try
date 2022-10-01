@@ -9,7 +9,7 @@
         <!-- Navigation -->
         <?php include "includes/navigation.php"; ?>
 
-        <?php include "includes/navigation.php"; ?>
+        <?php include "includes/page_wrapper.php"; ?>
         <!-- /#page-wrapper -->
 
     </div>

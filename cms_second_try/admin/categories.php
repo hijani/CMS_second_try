@@ -25,7 +25,7 @@
                             <div class="form-group">
                                 <input type="text" name="category_name" class="form-control" placeholder="Category Name">
                             </div>
-                            <button class="btn btn-primary">Add Category</button>
+                            <button type="submit" name="add_category" class="btn btn-primary">Add Category</button>
                         </form>
                     </div>
                     <div class="col-md-8">

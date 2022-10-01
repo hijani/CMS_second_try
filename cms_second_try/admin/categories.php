@@ -21,7 +21,18 @@
                         </h1>
                     </div>
                     <div class="col-md-4">
-                        <form action="">
+                        <?php 
+                        
+                            if(isset($_POST['add_category'])) {
+                                $category_content = $_POST['category_name'];
+                                
+                                $query = "INSERT INTO categories (cat_title) ";
+                                $query .= "VALUES ($category_content) ";
+                                $add_category_query = mysqli_query($connection, $query);
+                            }
+                        
+                        ?>
+                        <form action="" method="post">
                             <div class="form-group">
                                 <input type="text" name="category_name" class="form-control" placeholder="Category Name">
                             </div>

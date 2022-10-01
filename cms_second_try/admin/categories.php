@@ -30,7 +30,38 @@
                     </div>
                     <div class="col-md-8">
                         <table class="table">
-                            
+                            <tr>
+                                <th>Category ID</th>
+                                <th>Category Title</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                            <tr>
+
+                                <?php 
+                                
+                                    $query = "SELECT * FROM categories";
+                                    $category_query = mysqli_query($connection, $query);
+
+                                    if(!$category_query) {
+                                        die("Query Failed" . mysqli_error($connection));
+                                    }
+
+                                    while ($row = mysqli_fetch_assoc($category_query)) {
+                                        $cat_id = $row['cat_id'];
+                                        $cat_title = $row['cat_title'];
+
+                                        echo "<td>$cat_id</td>";
+                                        echo "<td>$cat_title</td>";
+                                        echo "<td><a href='#'>Edit</a></td>";
+                                        echo "<td><a href='#'>Delete</a></td>";
+
+
+                                    }
+                                
+                                ?>
+
+                            </tr>
                         </table>
                     </div>
                 </div>

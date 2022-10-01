@@ -36,7 +36,6 @@
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
-
                                 <?php 
                                 
                                     $query = "SELECT * FROM categories";
@@ -57,11 +56,9 @@
                                         echo "<td><a href='#'>Delete</a></td>";
                                         echo "</tr>";
 
-
                                     }
                                 
                                 ?>
-
                         </table>
                     </div>
                 </div>

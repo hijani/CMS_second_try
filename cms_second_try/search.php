@@ -37,7 +37,7 @@
                         echo "<h1>No Result</h1>";
                     } else {
 
-                        $query = "SELECT * FROM posts";
+                        $query = "SELECT * FROM posts WHERE post_tags LIKE '%$search_text%'";
                         $post_query = mysqli_query($connection, $query);
 
                         while($row = mysqli_fetch_assoc($post_query)) {

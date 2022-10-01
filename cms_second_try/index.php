@@ -22,7 +22,7 @@
                 <?php include "includes/blog_search.php"; ?>
 
                 <!-- Blog Categories Well -->
-                <?php include "includes/categories.php"; ?>
+                <?php include "includes/blog_categories.php"; ?>
 
                 <!-- Side Widget Well -->
                 <div class="well">

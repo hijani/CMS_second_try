@@ -11,6 +11,11 @@
             $add_category_query = mysqli_query($connection, $query);
         }
     }
+    function delete_category() {
+        global $connection;
+
+        if
+    }
 
 
 

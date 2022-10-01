@@ -55,7 +55,12 @@
                         
                         ?>
 
-                        
+                        <?php 
+                            if(isset($_GET['edit'])) {
+                                include "includes/update_category.php";
+                            }
+                        ?>
+
                     </div>
                     <div class="col-md-8">
                         <table class="table">

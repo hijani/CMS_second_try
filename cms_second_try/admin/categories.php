@@ -40,9 +40,38 @@
                             <button type="submit" name="add_category" class="btn btn-primary">Add Category</button>
                         </form>
 
+                        <hr>
+
+                        <?php 
+                        
+                            if(isset($_POST['update_category'])) {
+                                $cat_id = $_GET['edit'];
+                                $category_content = $_POST['category_name'];
+                                
+                                $query = "UPDATE categories SET cat_title = '$category_content' ";
+                                $query .= "WHERE cat_id = $cat_id ";
+                                $update_category_query = mysqli_query($connection, $query);
+                            }
+                        
+                        ?>
+
                         <form action="" method="post">
                             <div class="form-group">
-                                <input type="text" name="category_name" class="form-control" placeholder="Category Name">
+                                <?php 
+                                    if(isset($_GET['edit'])){
+                                        $cat_id = $_GET['edit'];
+                                        
+                                        $query = "SELECT * FROM categories WHERE cat_id = $cat_id ";
+                                        $edit_category_query = mysqli_query($connection, $query);
+        
+                                        while($row = mysqli_fetch_assoc($edit_category_query)) {
+                                            $cat_title = $row['cat_title'];
+                                        
+                                ?>
+                                
+                                <input type="text" value="<?php echo $cat_title; ?>" name="category_name" class="form-control" placeholder="Category Name">
+
+                                <?php } } ?>
                             </div>
                             <button type="submit" name="update_category" class="btn btn-primary">Update Category</button>
                         </form>

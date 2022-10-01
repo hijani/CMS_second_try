@@ -20,6 +20,19 @@
                             Categories
                         </h1>
                     </div>
+                    <div class="col-md-4">
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" name="category_name" class="form-control" placeholder="Category Name">
+                            </div>
+                            <button class="btn btn-primary">Add Category</button>
+                        </form>
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table">
+                            
+                        </table>
+                    </div>
                 </div>
                 <!-- /.row -->
 

@@ -30,9 +30,7 @@
 ?>
 
 
-<form action="" method="post" enctype="multipart/form-data>
-    <?php echo $post_image_temp;
-        echo $post_image; ?>
+<form action="" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <input type="text" name="post_title" class="form-control" placeholder="Post Title">
     </div>

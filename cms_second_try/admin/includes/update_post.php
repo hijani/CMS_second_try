@@ -1,6 +1,7 @@
 <?php 
 
     if(isset($_POST['update_post'])) {
+        $post_id = $_GET['edit'];
         $post_title = $_POST['post_title'];
         $post_category_id = $_POST['post_category_id'];
         $post_author = $_POST['post_author'];
@@ -19,6 +20,7 @@
         $query.= " VALUES ('$post_title', $post_category_id, ";
         $query.= "'$post_author', now(), '$post_image', ";
         $query.= "'$post_content', '$post_tags', $post_comment_count, '$post_status') ";
+        $query .= "WHERE post_id = $post_id ";
         $add_post_query = mysqli_query($connection, $query);
 
         move_uploaded_file($post_image_temp, "../images/$post_image");

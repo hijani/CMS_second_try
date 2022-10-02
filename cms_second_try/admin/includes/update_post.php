@@ -1,7 +1,7 @@
 <?php 
 
     if(isset($_POST['update_post'])) {
-        $post_id = $_GET['edit'];
+        $update_post_id = $_GET['update_post_id'];
         // $post_title = $_POST['post_title'];
         // $post_category_id = $_POST['post_category_id'];
         // $post_author = $_POST['post_author'];
@@ -26,7 +26,7 @@
         // move_uploaded_file($post_image_temp, "../images/$post_image");
     }   
 
-        $show_query = "SELECT * FROM posts WHERE post_id = $post_id";
+        $show_query = "SELECT * FROM posts WHERE post_id = $update_post_id";
         $show_update_post = mysqli_query($connection, $show_query);
 
         while ($row = mysqli_fetch_assoc($show_update_post)) {

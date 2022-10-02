@@ -9,9 +9,17 @@
         $post_content = $_POST['post_content'];
         $post_tags = $_POST['post_tags'];
         $post_status = $_POST['post_status'];
+        $post_comment_count = 4;
 
         $query = "INSERT INTO posts (post_title, ";
-        $query .= "post";
+        $query .= "post_category_id, post_author, ";
+        $query .= "post_date, post_image, post_content, ";
+        $query.= "post_tags, post_comment_count, post_status) ";
+
+        $query.= " VALUES ('$post_title', $post_category_id, ";
+        $query.= "'$post_author', now(), '$post_image', ";
+        $query.= "'$post_content', '$post_tags', $post_comment_count, '$post_status') ";
+        $add_post_query = mysqli_query($connection, $query);
         
 
     }

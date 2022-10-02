@@ -1,6 +1,30 @@
+<?php 
+
+    if(isset($_POST['add_post'])) {
+        $post_title = $_POST['post_title'];
+        $post_category_id = $_POST['post_category_id'];
+        $post_author = $_POST['post_author'];
+        $post_image = $_POST['name']['post_image'];
+        $post_image_temp = $_POST['tmp']['post_image'];
+        $post_content = $_POST['post_content'];
+        $post_tags = $_POST['post_tags'];
+        $post_status = $_POST['post_status'];
+
+        $query = "INSERT INTO posts (post_title, ";
+        $query .= "post";
+        
+
+    }
+
+?>
+
+
 <form action="" method="post">
     <div class="form-group">
         <input type="text" name="post_title" class="form-control" placeholder="Post Title">
+    </div>
+    <div class="form-group">
+        <input type="text" name="post_category_id" class="form-control" placeholder="Post Category ID">
     </div>
     <div class="form-group">
         <input type="text" name="post_author" class="form-control" placeholder="Post Author">

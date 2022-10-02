@@ -21,12 +21,13 @@
         $query.= "'$post_author', now(), '$post_image', ";
         $query.= "'$post_content', '$post_tags', $post_comment_count, '$post_status') ";
         $query .= "WHERE post_id = $post_id ";
-        $add_post_query = mysqli_query($connection, $query);
+        $update_post_query = mysqli_query($connection, $query);
 
         move_uploaded_file($post_image_temp, "../images/$post_image");
 
-
-        
+        while ($row = mysqli_fetch_assoc($update_post_query)) {
+            
+        }
         
 
     }

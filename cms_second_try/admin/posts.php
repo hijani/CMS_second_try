@@ -23,7 +23,25 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        <?php 
                         
+                            if(isset($_GET['source'])) {
+                                $source = $_GET['source'];
+
+                                switch($source) {
+                                    case 0: 
+                                        echo 123;
+                                        break;
+                                    case 23: 
+                                        echo 1200;
+                                        break;
+                                    default:
+                                    include "includes/view_all_posts.php";
+                                    break;
+                                }
+                            }
+                        
+                        ?>
                     </div>
                 </div>
                 <!-- /.row -->

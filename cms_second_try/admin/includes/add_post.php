@@ -4,8 +4,8 @@
         $post_title = $_POST['post_title'];
         $post_category_id = $_POST['post_category_id'];
         $post_author = $_POST['post_author'];
-        $post_image = $_POST['name']['post_image'];
-        $post_image_temp = $_POST['tmp']['post_image'];
+        $post_image = $_POST['post_image']['name'];
+        $post_image_temp = $_POST['post_image']['tmp'];
         $post_content = $_POST['post_content'];
         $post_tags = $_POST['post_tags'];
         $post_status = $_POST['post_status'];
@@ -20,6 +20,10 @@
         $query.= "'$post_author', now(), '$post_image', ";
         $query.= "'$post_content', '$post_tags', $post_comment_count, '$post_status') ";
         $add_post_query = mysqli_query($connection, $query);
+
+        move_uploaded_file($post_image_temp, "../images/$post_image");
+        // echo $post_image_temp;
+        // echo $post_image;
         
 
     }

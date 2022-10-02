@@ -1,6 +1,6 @@
 <?php 
 
-    if(isset($_POST['add_post'])) {
+    if(isset($_POST['update_post'])) {
         $post_title = $_POST['post_title'];
         $post_category_id = $_POST['post_category_id'];
         $post_author = $_POST['post_author'];
@@ -11,7 +11,7 @@
         $post_status = $_POST['post_status'];
         $post_comment_count = 4;
 
-        $query = "INSERT INTO posts (post_title, ";
+        $query = "UPDATE posts SET (post_title, ";
         $query .= "post_category_id, post_author, ";
         $query .= "post_date, post_image, post_content, ";
         $query.= "post_tags, post_comment_count, post_status) ";

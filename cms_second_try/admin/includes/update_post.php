@@ -26,8 +26,8 @@
         move_uploaded_file($post_image_temp, "../images/$post_image");
     }   
 
-        $query = "SELECT * FROM posts WHERE post_id = $post_id";
-        $show_update_post = mysqli_query($connection, $query);
+        $show_query = "SELECT * FROM posts WHERE post_id = $post_id";
+        $show_update_post = mysqli_query($connection, $show_query);
 
         while ($row = mysqli_fetch_assoc($show_update_post)) {
             $post_title = $row['post_title'];

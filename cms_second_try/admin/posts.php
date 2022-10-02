@@ -27,18 +27,20 @@
                         
                             if(isset($_GET['source'])) {
                                 $source = $_GET['source'];
-
-                                switch($source) {
-                                    case 0: 
-                                        echo 123;
-                                        break;
-                                    case 23: 
-                                        echo 1200;
-                                        break;
-                                    default:
+                            }
+                            else {
+                                $source = "";
+                            }
+                            switch($source) {
+                                case 'add_post': 
+                                    include "includes/add_post.php";
+                                    break;
+                                case 'update_post': 
+                                    include "includes/add_post.php";
+                                    break;
+                                default:
                                     include "includes/view_all_posts.php";
                                     break;
-                                }
                             }
                             // include "includes/view_all_posts.php";
                         ?>

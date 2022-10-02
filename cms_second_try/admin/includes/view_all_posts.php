@@ -43,7 +43,7 @@
             echo "<td>$post_tags</td>";
             echo "<td>$post_comment_count</td>";
             echo "<td>$post_status</td>";
-            echo "<td><a href='posts.php?source='>Edit</a></td>";
+            echo "<td><a href='posts.php?source=update_post'>Edit</a></td>";
             echo "<td><a href=''>Delete</a></td>";
             echo '</tr>';
         }

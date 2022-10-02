@@ -17,6 +17,6 @@
     <div class="form-group">
         <input type="text" name="post_status" class="form-control" placeholder="Post Status">
     </div>
-    <input type="submit" name="add_post" class="btn btn-primary">
+    <input type="submit" value="Add Post" name="add_post" class="btn btn-primary">
     
 </form>

@@ -12,10 +12,11 @@
         <textarea name="post_content" cols="30" rows="10" placeholder="Post Content"></textarea>
     </div>
     <div class="form-group">
-        <input type="text" name="post_tags" class="form-control" placeholder="Post Title">
+        <input type="text" name="post_tags" class="form-control" placeholder="Post Tags">
     </div>
     <div class="form-group">
-        <input type="text" name="post_status" class="form-control" placeholder="Post Title">
+        <input type="text" name="post_status" class="form-control" placeholder="Post Status">
     </div>
+    <input type="submit" name="add_post" class="btn btn-primary">
     
 </form>

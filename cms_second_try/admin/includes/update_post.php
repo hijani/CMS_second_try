@@ -22,6 +22,8 @@
         $add_post_query = mysqli_query($connection, $query);
 
         move_uploaded_file($post_image_temp, "../images/$post_image");
+
+
         
         
 
@@ -52,6 +54,6 @@
     <div class="form-group">
         <input type="text" name="post_status" class="form-control" placeholder="Post Status">
     </div>
-    <input type="submit" value="Add Post" name="add_post" class="btn btn-primary">
+    <input type="submit" value="Update Post" name="update_post" class="btn btn-primary">
     
 </form>

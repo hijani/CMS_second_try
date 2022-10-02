@@ -44,8 +44,15 @@
             echo "<td>$post_comment_count</td>";
             echo "<td>$post_status</td>";
             echo "<td><a href='posts.php?source=update_post'>Edit</a></td>";
-            echo "<td><a href=''>Delete</a></td>";
+            echo "<td><a href='posts.php?delete=$post_id'>Delete</a></td>";
             echo '</tr>';
+        }
+
+        if(isset($_GET['delete'])) {
+            $post_id = $_GET['delete'];
+            $query = "DELETE FROM posts WHERE post_id='$post_id'";
+            $delete_query = mysqli_query($connection, $query);
+            header("Location: posts.php");
         }
     ?>
 </table>

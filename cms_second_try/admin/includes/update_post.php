@@ -60,7 +60,9 @@
         <input value="<?php echo $post_title; ?>" type="text" name="post_title" class="form-control" placeholder="Post Title">
     </div>
     <div class="form-group">
-        <input type="text" value="<?php echo $post_category_id; ?>" name="post_category_id" class="form-control" placeholder="Post Category ID">
+        <select name="psot_category_id" id="">
+            <option value="$cat_id">$cat_title</option>
+        </select>
     </div>
     <div class="form-group">
         <input value="<?php echo $post_author; ?>" type="text" name="post_author" class="form-control" placeholder="Post Author">

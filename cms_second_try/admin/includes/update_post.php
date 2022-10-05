@@ -15,14 +15,15 @@
         $post_status = $_POST['post_status'];
         $post_comment_count = 4;
 
-        $query = "UPDATE posts SET (post_title, ";
-        $query .= "post_category_id, post_author, ";
-        $query .= "post_date, post_image, post_content, ";
-        $query.= "post_tags, post_comment_count, post_status) ";
-
-        $query.= " VALUES ('$post_title', $post_category_id, ";
-        $query.= "'$post_author', now(), '$post_image', ";
-        $query.= "'$post_content', '$post_tags', $post_comment_count, '$post_status' ) ";
+        $query = "UPDATE posts SET post_title = '$post_title', ";
+        $query .= "post_category_id = $post_category_id, ";
+        $query .= "post_author = '$post_author', ";
+        $query .= "post_image = '$post_image', ";
+        $query .= "post_content = '$post_content', ";
+        $query .= "post_tags = '$post_tags', ";
+        $query .= "post_status = '$post_status', ";
+        $query .= "post_comment_count = $post_comment_count, ";
+        $query .= "post_date = now() ";
         $query .= " WHERE post_id = $update_post_id ";
         $update_post_query = mysqli_query($connection, $query);
 

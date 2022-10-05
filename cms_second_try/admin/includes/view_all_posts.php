@@ -38,7 +38,7 @@
             echo "<td>$post_title</td>";
             echo "<td>$post_author</td>";
             echo "<td>$post_date</td>";
-            echo "<td><img src='../images/$post_image'></td>";
+            echo "<td><img src='../images/$post_image' width='100px'></td>";
             echo "<td>$post_content</td>";
             echo "<td>$post_tags</td>";
             echo "<td>$post_comment_count</td>";

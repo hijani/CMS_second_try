@@ -27,9 +27,7 @@
         $query .= " WHERE post_id = $update_post_id ";
         $update_post_query = mysqli_query($connection, $query);
 
-        if($post_image === '') {
-            
-        }
+        
 
         move_uploaded_file($post_image_temp, "../images/$post_image");
     }   
@@ -44,6 +42,7 @@
             $post_content = $row['post_content'];
             $post_tags = $row['post_tags'];
             $post_status = $row['post_status'];
+            $post_image = $row['post_image'];
         }
 ?>
 
@@ -58,7 +57,7 @@
         <input value="<?php echo $post_author; ?>" type="text" name="post_author" class="form-control" placeholder="Post Author">
     </div>
     <div class="form-group">
-        <img src="../images/<?php $post_image; ?>" alt="some images">
+        <img src="../images/<?php $post_image; ?>" width="100px" alt="some images">
         <input type="file" name="post_image" class="form-control">
     </div>
     <div class="form-group">
@@ -73,5 +72,12 @@
     <input type="submit" value="Update Post" name="update_post" class="btn btn-primary">
     
 </form>
+<?php 
+
+// if($post_image === '') {
+//     $post_image = $post_image;           
+// }
+
+?>
 
 

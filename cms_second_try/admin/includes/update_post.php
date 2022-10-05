@@ -22,8 +22,8 @@
 
         $query.= " VALUES ('$post_title', $post_category_id, ";
         $query.= "'$post_author', now(), '$post_image', ";
-        $query.= "'$post_content', '$post_tags', $post_comment_count, '$post_status') ";
-        $query .= " WHERE post_id = $post_id ";
+        $query.= "'$post_content', '$post_tags', $post_comment_count, '$post_status' ) ";
+        $query .= " WHERE post_id = $update_post_id ";
         $update_post_query = mysqli_query($connection, $query);
 
         move_uploaded_file($post_image_temp, "../images/$post_image");

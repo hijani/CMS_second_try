@@ -61,7 +61,21 @@
     </div>
     <div class="form-group">
         <select name="psot_category_id" id="">
-            <option value="$cat_id">$cat_title</option>
+        <?php 
+            if(isset($_GET['edit'])){
+                $cat_id = $_GET['edit'];
+                
+                $query = "SELECT * FROM categories WHERE cat_id = $cat_id ";
+                $edit_category_query = mysqli_query($connection, $query);
+
+                while($row = mysqli_fetch_assoc($edit_category_query)) {
+                    $cat_title = $row['cat_title'];
+                    echo "<option value=$cat_id>$cat_title</option>";
+                }
+            }
+                
+        ?>
+            
         </select>
     </div>
     <div class="form-group">

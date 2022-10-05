@@ -62,17 +62,14 @@
     <div class="form-group">
         <select name="post_category_id" id="">
         <?php 
-            if(isset($_GET['edit'])){
-                $cat_id = $_GET['edit'];
                 
-                $query = "SELECT * FROM categories";
-                $edit_category_query = mysqli_query($connection, $query);
+            $query = "SELECT * FROM categories";
+            $edit_category_query = mysqli_query($connection, $query);
 
-                while($row = mysqli_fetch_assoc($edit_category_query)) {
-                    $cat_title = $row['cat_title'];
-                    $cat_id = $row['cat_id'];
-                    echo "<option value=$cat_id>$cat_title</option>";
-                }
+            while($row = mysqli_fetch_assoc($edit_category_query)) {
+                $cat_title = $row['cat_title'];
+                $cat_id = $row['cat_id'];
+                echo "<option value=$cat_id>$cat_title</option>";
             }
                 
         ?>

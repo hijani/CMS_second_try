@@ -65,7 +65,7 @@
             if(isset($_GET['edit'])){
                 $cat_id = $_GET['edit'];
                 
-                $query = "SELECT * FROM categories WHERE cat_id = $cat_id ";
+                $query = "SELECT * FROM categories";
                 $edit_category_query = mysqli_query($connection, $query);
 
                 while($row = mysqli_fetch_assoc($edit_category_query)) {

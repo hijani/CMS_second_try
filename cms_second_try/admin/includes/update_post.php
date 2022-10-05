@@ -70,6 +70,7 @@
 
                 while($row = mysqli_fetch_assoc($edit_category_query)) {
                     $cat_title = $row['cat_title'];
+                    $cat_id = $row['cat_id'];
                     echo "<option value=$cat_id>$cat_title</option>";
                 }
             }

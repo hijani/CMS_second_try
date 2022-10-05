@@ -57,7 +57,7 @@
         <input value="<?php echo $post_author; ?>" type="text" name="post_author" class="form-control" placeholder="Post Author">
     </div>
     <div class="form-group">
-        <img src="../images/<?php $post_image; ?>" width="100px" alt="some images">
+        <img src="../images/<?php echo $post_image; ?>" width="100px" alt="some images">
         <input type="file" name="post_image" class="form-control">
     </div>
     <div class="form-group">

@@ -27,9 +27,11 @@
         $query .= " WHERE post_id = $update_post_id ";
         $update_post_query = mysqli_query($connection, $query);
 
-        
+        if($post_image === '') {
+            
+        }
 
-        
+        move_uploaded_file($post_image_temp, "../images/$post_image");
     }   
 
         $show_query = "SELECT * FROM posts WHERE post_id = $update_post_id";
@@ -42,7 +44,6 @@
             $post_content = $row['post_content'];
             $post_tags = $row['post_tags'];
             $post_status = $row['post_status'];
-            $post_image = $row['post_image'];
         }
 ?>
 

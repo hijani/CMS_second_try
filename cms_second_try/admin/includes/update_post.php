@@ -15,6 +15,15 @@
         $post_status = $_POST['post_status'];
         $post_comment_count = 4;
 
+        if(empty($post_image)) {
+            $query = "SELECT * FROM posts WHERE post_id = $update_post_id";
+            $image_query = mysqli_query($connection, $query);
+
+            while($row = mysqli_fetch_assoc($image_query)) {
+                $post_image = $row['post_image'];
+            }
+        }
+
         $query = "UPDATE posts SET post_title = '$post_title', ";
         $query .= "post_category_id = $post_category_id, ";
         $query .= "post_author = '$post_author', ";

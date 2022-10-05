@@ -60,7 +60,7 @@
         <input value="<?php echo $post_title; ?>" type="text" name="post_title" class="form-control" placeholder="Post Title">
     </div>
     <div class="form-group">
-        <select name="psot_category_id" id="">
+        <select name="post_category_id" id="">
         <?php 
             if(isset($_GET['edit'])){
                 $cat_id = $_GET['edit'];

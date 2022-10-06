@@ -22,6 +22,7 @@
 
             <?php 
 
+                // if(isset($))
                 $query = "SELECT * FROM posts";
                 $post_query = mysqli_query($connection, $query);
 

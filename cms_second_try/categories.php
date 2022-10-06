@@ -26,7 +26,7 @@
                     $category_id = $_GET['category_id'];
                 }
 
-                $query = "SELECT * FROM posts WHERE post_id = $category_id ";
+                $query = "SELECT * FROM posts WHERE post_category_id = $category_id ";
                 $post_query = mysqli_query($connection, $query);
 
                 while($row = mysqli_fetch_assoc($post_query)) {

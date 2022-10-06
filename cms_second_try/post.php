@@ -22,8 +22,10 @@
 
             <?php 
 
-                // if(isset($))
-                $query = "SELECT * FROM posts";
+                if(isset($_GET['p_id'])) {
+                    $post_id = $_GET['p_id'];
+                }
+                $query = "SELECT * FROM posts WHERE post_id = $post_id";
                 $post_query = mysqli_query($connection, $query);
 
                 while($row = mysqli_fetch_assoc($post_query)) {

@@ -1,7 +1,8 @@
 <table class="table">
     <tr>
-        <th>Post ID</th>
+        
         <th>Post Title</th>
+        <th>Post Category</th>
         <th>Post Author</th>
         <th>Post Date</th>
         <th>Post Image</th>
@@ -23,6 +24,7 @@
         while ($row = mysqli_fetch_assoc($post_query)) {
 
             $post_id = $row['post_id'];
+            $post_category = $row['post_category_id'];
             $post_title = $row['post_title'];
             $post_author = $row['post_author'];
             $post_date = $row['post_date'];
@@ -34,8 +36,8 @@
 
 
             echo '<tr>';
-            echo "<td>$post_id</td>";
             echo "<td>$post_title</td>";
+            echo "<td>$post_category</td>";
             echo "<td>$post_author</td>";
             echo "<td>$post_date</td>";
             echo "<td><img src='../images/$post_image' width='100px'></td>";

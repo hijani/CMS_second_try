@@ -31,7 +31,7 @@
                 }
 
                 $query = "SELECT * FROM posts WHERE post_id = $post_id ";
-                $query .= " OR post_category_id = $category_id";
+                // $query .= " OR post_category_id = $category_id";
                 $post_query = mysqli_query($connection, $query);
 
                 while($row = mysqli_fetch_assoc($post_query)) {

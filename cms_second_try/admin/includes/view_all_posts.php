@@ -46,7 +46,7 @@
                 $cat_id = $row['cat_id'];
             }
 
-            echo "<td>$cat_title</td>";
+            echo "<td><a href=''>$cat_title</a></td>";
             echo "<td>$post_author</td>";
             echo "<td>$post_date</td>";
             echo "<td><img src='../images/$post_image' width='100px'></td>";

@@ -36,8 +36,6 @@
         $query .= " WHERE post_id = $update_post_id ";
         $update_post_query = mysqli_query($connection, $query);
 
-        
-
         move_uploaded_file($post_image_temp, "../images/$post_image");
     }   
 

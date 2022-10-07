@@ -6,7 +6,7 @@
         <th>Comment Date</th>
         <th>Approve</th>
         <th>Un-Approve</th>
-        <th>Edit</th>
+        <!-- <th>Edit</th> -->
         <th>Delete</th>
     </tr>
     <?php 
@@ -34,7 +34,7 @@
             echo "<td>$comment_status</td>";
             echo "<td>dispprove</td>";
             echo "<td>approve</td>";
-            echo "<td><a href='Comments.php?source=update_Comment&update_Comment_id=$comment_id'>Edit</a></td>";
+            // echo "<td><a href='Comments.php?source=update_Comment&update_Comment_id=$comment_id'>Edit</a></td>";
             echo "<td><a href='Comments.php?delete=$comment_id'>Delete</a></td>";
             echo '</tr>';
         }

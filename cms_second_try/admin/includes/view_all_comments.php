@@ -4,7 +4,8 @@
         <th>Comment Email</th>
         <th>Comment Content</th>
         <th>Comment Date</th>
-        <th>Comment Status</th>
+        <th>Approve</th>
+        <th>Un-Approve</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>

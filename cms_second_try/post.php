@@ -77,17 +77,33 @@
                 <!-- Posted Comments -->
 
                 <!-- Comment -->
+                <?php 
+                
+                    $query = "SELECT * FROM comments";
+                    $comment_query = mysqli_query($connection, $query);
+
+                    while($row = mysqli_fetch_assoc($comment_query)) {
+                        $comment_id = $row['comment_id'];
+                        $comment_post_id = $row['comment_post_id'];
+                        $comment_author = $row['comment_auhtor'];
+                        $comment_email = $row['comment_email'];
+                        $comment_content = $row['comment_content'];
+                        $comment_date = $row['comment_date'];
+                        $comment_status = $row['comment_status'];
+                    
+                ?>
                 <div class="media">
                     <!-- <a class="pull-left" href="#">
                         <img class="media-object" src="http://placehold.it/64x64" alt="person-pic">
                     </a> -->
                     <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
+                        <h4 class="media-heading"><?php echo $comment_author; ?>
+                            <small><?php echo $comment_date; ?></small>
                         </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <?php echo $comment_content; ?>
                     </div>
                 </div>
+                <?php } ?>
 
 
             <!-- Pager -->

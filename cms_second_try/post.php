@@ -64,6 +64,21 @@
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
+
+                    <?php 
+                        if(isset($_POST['add_comment'])) {
+                            $comment_email = $_POST['comment_email'];
+                            $comment_author = $_POST['comment_author'];
+                            $comment_content = $_POST['comment_content'];
+
+                            $query = "INSERT INTO comments (comment_author, ";
+                            $query .= "comment_email, comment_content ) ";
+                            $query .= "VALUES ($comment_author, ";
+                            $query .= "$comment_email, $comment_content) ";
+                            $add_comment_query = mysqli_query($connection, $query);
+
+                        }
+                    ?>
                     <form role="form" method="post" action="">
                         <div class="form-group">
                             <label for="comment_author">Name</label>

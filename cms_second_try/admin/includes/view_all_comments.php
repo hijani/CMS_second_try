@@ -41,7 +41,7 @@
 
         if(isset($_GET['delete'])) {
             $comment_id = $_GET['delete'];
-            $query = "DELETE FROM Comments WHERE Comment_id='$comment_id'";
+            $query = "DELETE FROM comments WHERE comment_id='$comment_id'";
             $delete_query = mysqli_query($connection, $query);
             header("Location: comments.php");
         }

@@ -26,10 +26,6 @@
                     $post_id = $_GET['p_id'];
                 }
 
-                if(isset($_GET['category_id'])) {
-                    $category_id = $_GET['category_id'];
-                }
-
                 $query = "SELECT * FROM posts WHERE post_id = $post_id ";
                 $post_query = mysqli_query($connection, $query);
 
@@ -71,10 +67,12 @@
                             $comment_author = $_POST['comment_author'];
                             $comment_content = $_POST['comment_content'];
 
-                            $query = "INSERT INTO comments (comment_author, ";
-                            $query .= "comment_email, comment_content ) ";
-                            $query .= "VALUES ($comment_author, ";
-                            $query .= "$comment_email, $comment_content) ";
+                            $query = "INSERT INTO comments (comment_post_id, comment_author, ";
+                            $query .= "comment_email, comment_content, ";
+                            $query.= "comment_date, comment_status) ";
+                            $query .= "VALUES ($post_id, $comment_author, ";
+                            $query .= "$comment_email, $comment_content, ";
+                            $query .= "now(), 'approved') ";
                             $add_comment_query = mysqli_query($connection, $query);
 
                         }

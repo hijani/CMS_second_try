@@ -27,21 +27,21 @@
 
 
             echo '<tr>';
-            echo "<td>$Comment_author</td>";
-            echo "<td>$Comment_email</td>";
-            echo "<td>$Comment_content</td>";
-            echo "<td>$Comment_date</td>";
-            echo "<td>$Comment_status</td>";
-            echo "<td><a href='Comments.php?source=update_Comment&update_Comment_id=$Comment_id'>Edit</a></td>";
-            echo "<td><a href='Comments.php?delete=$Comment_id'>Delete</a></td>";
+            echo "<td>$comment_author</td>";
+            echo "<td>$comment_email</td>";
+            echo "<td>$comment_content</td>";
+            echo "<td>$comment_date</td>";
+            echo "<td>$comment_status</td>";
+            echo "<td><a href='Comments.php?source=update_Comment&update_Comment_id=$comment_id'>Edit</a></td>";
+            echo "<td><a href='Comments.php?delete=$comment_id'>Delete</a></td>";
             echo '</tr>';
         }
 
         if(isset($_GET['delete'])) {
-            $Comment_id = $_GET['delete'];
-            $query = "DELETE FROM Comments WHERE Comment_id='$Comment_id'";
+            $comment_id = $_GET['delete'];
+            $query = "DELETE FROM Comments WHERE Comment_id='$comment_id'";
             $delete_query = mysqli_query($connection, $query);
-            header("Location: Comments.php");
+            header("Location: comments.php");
         }
     ?>
 </table>

@@ -12,7 +12,7 @@
         $query = "SELECT * FROM comments";
         $comment_query = mysqli_query($connection, $query);
 
-        if(!$Comment_query) {
+        if(!$comment_query) {
             die("query failed" . mysqli_error($connection));
         }
 

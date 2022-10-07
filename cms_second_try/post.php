@@ -101,7 +101,7 @@
                 <!-- Comment -->
                 <?php 
                 
-                    $query = "SELECT * FROM comments";
+                    $query = "SELECT * FROM comments WHERE comment_post_id = $post_id";
                     $comment_query = mysqli_query($connection, $query);
 
                     while($row = mysqli_fetch_assoc($comment_query)) {

@@ -66,6 +66,14 @@
                     <h4>Leave a Comment:</h4>
                     <form role="form" method="post" action="">
                         <div class="form-group">
+                            <label for="comment_author">Name</label>
+                            <input type="text" name="comment_author" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment_email">Email</label>
+                            <input type="text" name="comment_email" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label for="comment_content">Your Message</label>
                             <textarea name="comment_content" class="form-control" rows="3"></textarea>
                         </div>

@@ -47,14 +47,14 @@
 
         if(isset($_GET['approve'])) {
             $comment_id = $_GET['approve'];
-            $query = "UPDATE categories SET comment_status = 'Approve' ";
+            $query = "UPDATE comments SET comment_status = 'Approve' ";
             $query .= "WHERE comment_id = $comment_id ";
             $approved = mysqli_query($connection, $query);
         }
 
         if(isset($_GET['unapprove'])) {
             $comment_id = $_GET['unapprove'];
-            $query = "UPDATE categories SET comment_status = 'Un-Approve' ";
+            $query = "UPDATE comments SET comment_status = 'Un-Approve' ";
             $query .= "WHERE comment_id = $comment_id ";
             $approved = mysqli_query($connection, $query);
         }

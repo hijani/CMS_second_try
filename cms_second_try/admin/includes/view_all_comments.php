@@ -1,10 +1,10 @@
 <table class="table">
     <tr>
-        
-        <th>Post Author</th>
-        <th>Post Date</th>
-        <th>Post Content</th>
-        <th>Post Status</th>
+        <th>Comment Author</th>
+        <th>Comment Email</th>
+        <th>Comment Content</th>
+        <th>Comment Date</th>
+        <th>Comment Status</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
@@ -12,17 +12,18 @@
         $query = "SELECT * FROM comments";
         $comment_query = mysqli_query($connection, $query);
 
-        if(!$post_query) {
+        if(!$Comment_query) {
             die("query failed" . mysqli_error($connection));
         }
 
         while ($row = mysqli_fetch_assoc($comment_query)) {
+            
 
             
 
 
             echo '<tr>';
-            echo "<td>$post_title</td>";
+            echo "<td>$Comment_title</td>";
             
             $query = "SELECT * FROM categories WHERE cat_id = $post_category";
             $edit_category_query = mysqli_query($connection, $query);
@@ -33,23 +34,23 @@
             }
 
             echo "<td><a href='../categories.php?category_id=$cat_id'>$cat_title</a></td>";
-            echo "<td>$post_author</td>";
-            echo "<td>$post_date</td>";
-            echo "<td><img src='../images/$post_image' width='100px'></td>";
-            echo "<td>$post_content</td>";
-            echo "<td>$post_tags</td>";
-            echo "<td>$post_comment_count</td>";
-            echo "<td>$post_status</td>";
-            echo "<td><a href='posts.php?source=update_post&update_post_id=$post_id'>Edit</a></td>";
-            echo "<td><a href='posts.php?delete=$post_id'>Delete</a></td>";
+            echo "<td>$Comment_author</td>";
+            echo "<td>$Comment_date</td>";
+            echo "<td><img src='../images/$Comment_image' width='100px'></td>";
+            echo "<td>$Comment_content</td>";
+            echo "<td>$Comment_tags</td>";
+            echo "<td>$Comment_comment_count</td>";
+            echo "<td>$Comment_status</td>";
+            echo "<td><a href='Comments.php?source=update_Comment&update_Comment_id=$Comment_id'>Edit</a></td>";
+            echo "<td><a href='Comments.php?delete=$Comment_id'>Delete</a></td>";
             echo '</tr>';
         }
 
         if(isset($_GET['delete'])) {
-            $post_id = $_GET['delete'];
-            $query = "DELETE FROM posts WHERE post_id='$post_id'";
+            $Comment_id = $_GET['delete'];
+            $query = "DELETE FROM Comments WHERE Comment_id='$Comment_id'";
             $delete_query = mysqli_query($connection, $query);
-            header("Location: posts.php");
+            header("Location: Comments.php");
         }
     ?>
 </table>

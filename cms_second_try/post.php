@@ -77,7 +77,7 @@
 
                         }
                     ?>
-                    <form role="form" method="post" action="">
+                    <form method="post" action="">
                         <div class="form-group">
                             <label for="comment_author">Name</label>
                             <input type="text" name="comment_author" class="form-control">

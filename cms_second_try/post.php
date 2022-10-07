@@ -90,7 +90,7 @@
                             <label for="comment_content">Your Message</label>
                             <textarea name="comment_content" class="form-control" rows="3"></textarea>
                         </div>
-                        <button type="submit" name="add_comment" class="btn btn-primary">Submit</button>
+                        <input type="submit" name="add_comment" class="btn btn-primary" value="Submit">
                     </form>
                 </div>
 

@@ -32,9 +32,8 @@
             echo "<td>$comment_email</td>";
             echo "<td>$comment_content</td>";
             echo "<td>$comment_status</td>";
-            echo "<td>dispprove</td>";
-            echo "<td>approve</td>";
-            // echo "<td><a href='Comments.php?source=update_Comment&update_Comment_id=$comment_id'>Edit</a></td>";
+            echo "<td><a href='comments.php?approve=$comment_id'>Approve</a></td>";
+            echo "<td><a href='comments.php?unapprove=$comment_id'>Un-Approve</a></td>";
             echo "<td><a href='comments.php?delete=$comment_id'>Delete</a></td>";
             echo '</tr>';
         }
@@ -44,6 +43,20 @@
             $query = "DELETE FROM comments WHERE comment_id='$comment_id'";
             $delete_query = mysqli_query($connection, $query);
             header("Location: comments.php");
+        }
+
+        if(isset($_GET['approve'])) {
+            $comment_id = $_GET['approve'];
+            $query = "UPDATE categories SET comment_status = 'Approve' ";
+            $query .= "WHERE comment_id = $comment_id ";
+            $approved = mysqli_query($connection, $query);
+        }
+
+        if(isset($_GET['unapprove'])) {
+            $comment_id = $_GET['unapprove'];
+            $query = "UPDATE categories SET comment_status = 'Un-Approve' ";
+            $query .= "WHERE comment_id = $comment_id ";
+            $approved = mysqli_query($connection, $query);
         }
     ?>
 </table>

@@ -109,7 +109,7 @@
                     while($row = mysqli_fetch_assoc($comment_query)) {
                         $comment_id = $row['comment_id'];
                         $comment_post_id = $row['comment_post_id'];
-                        $comment_author = $row['comment_auhtor'];
+                        $comment_author = $row['comment_author'];
                         $comment_email = $row['comment_email'];
                         $comment_content = $row['comment_content'];
                         $comment_date = $row['comment_date'];

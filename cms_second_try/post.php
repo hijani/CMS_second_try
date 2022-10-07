@@ -70,8 +70,8 @@
                             $query = "INSERT INTO comments (comment_post_id, comment_author, ";
                             $query .= "comment_email, comment_content, ";
                             $query .= "comment_date, comment_status) ";
-                            $query .= "VALUES ($post_id, $comment_author, ";
-                            $query .= "$comment_email, $comment_content, ";
+                            $query .= "VALUES ($post_id, '$comment_author', ";
+                            $query .= "'$comment_email', '$comment_content', ";
                             $query .= "now(), 'approved') ";
                             $add_comment_query = mysqli_query($connection, $query);
 

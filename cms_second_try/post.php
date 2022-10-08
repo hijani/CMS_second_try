@@ -37,6 +37,7 @@
                     $post_date = $row['post_date'];
                     $post_image = $row['post_image'];
                     $post_content = $row['post_content'];
+                    $post_comment_count = $row['post_comment_count'];
 
             ?>
                     <h2>

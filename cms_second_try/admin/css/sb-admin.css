@@ -130,11 +130,17 @@ ul.alert-dropdown {
     }
 
     .side-nav li a:hover,
-    .side-nav li a:focus,
-    .side-nav li a:visited {
+    .side-nav li a:focus {
         outline: none;
         background-color: #000 !important;
     }
+}
+
+.side-nav li a:hover,
+.side-nav li a:focus,
+.side-nav li a:visited {
+    outline: none;
+    background-color: #000 !important;
 }
 
 .side-nav>li>ul {

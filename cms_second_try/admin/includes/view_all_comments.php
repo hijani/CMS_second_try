@@ -36,7 +36,7 @@
             echo "<td>$comment_content</td>";
             echo "<td>$comment_status</td>";
 
-            $query = "SELECT * FROM posts";
+            $query = "SELECT * FROM posts WHERE post_id = $comment_post_id";
             $post_query = mysqli_query($connection, $query);
             while($row = mysqli_fetch_assoc($post_query)) {
                 $post_title = $row['post_title'];

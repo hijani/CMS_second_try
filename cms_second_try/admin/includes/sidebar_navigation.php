@@ -17,7 +17,7 @@
                 </li>
             </ul>
         </li>
-        <li class="active">
+        <li>
             <a href="comments.php"><i class="fa fa-fw fa-comment"></i> Comments</a>
         </li>
         <li>

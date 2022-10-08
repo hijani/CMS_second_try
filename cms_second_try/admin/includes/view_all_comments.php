@@ -1,5 +1,6 @@
 <table class="table">
     <tr>
+        <th>ID</th>
         <th>Comment Author</th>
         <th>Comment Email</th>
         <th>Comment Content</th>
@@ -29,11 +30,19 @@
 
 
             echo '<tr>';
+            echo "<td>$comment_id</td>";
             echo "<td>$comment_author</td>";
             echo "<td>$comment_email</td>";
             echo "<td>$comment_content</td>";
             echo "<td>$comment_status</td>";
-            echo "<td><a href='post.php?p_id=$comment_post_id'>In Response To</a></td>";
+
+            $query = "SELECT * FROM posts";
+            $post_query = mysqli_query($connection, $query);
+            while($row = mysqli_fetch_assoc($post_query)) {
+                $post_title = $row['post_title'];
+            }
+            echo "<td><a href='../post.php?p_id=$comment_post_id'>$post_title</a></td>";
+
             echo "<td><a href='comments.php?approve=$comment_id'>Approve</a></td>";
             echo "<td><a href='comments.php?unapprove=$comment_id'>Un-Approve</a></td>";
             echo "<td><a href='comments.php?delete=$comment_id'>Delete</a></td>";

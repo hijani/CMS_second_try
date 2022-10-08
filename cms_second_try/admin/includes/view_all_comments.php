@@ -4,6 +4,7 @@
         <th>Comment Email</th>
         <th>Comment Content</th>
         <th>Comment Date</th>
+        <th>In Response to</th>
         <th>Approve</th>
         <th>Un-Approve</th>
         <!-- <th>Edit</th> -->
@@ -32,6 +33,7 @@
             echo "<td>$comment_email</td>";
             echo "<td>$comment_content</td>";
             echo "<td>$comment_status</td>";
+            echo "<td>response</td>";
             echo "<td><a href='comments.php?approve=$comment_id'>Approve</a></td>";
             echo "<td><a href='comments.php?unapprove=$comment_id'>Un-Approve</a></td>";
             echo "<td><a href='comments.php?delete=$comment_id'>Delete</a></td>";

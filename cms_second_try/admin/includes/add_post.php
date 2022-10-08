@@ -33,7 +33,21 @@
         <input type="text" name="post_title" class="form-control" placeholder="Post Title">
     </div>
     <div class="form-group">
-        <input type="text" name="post_category_id" class="form-control" placeholder="Post Category ID">
+        <select name="post_category_id" id="post_category_id">
+        <?php 
+                
+            $query = "SELECT * FROM categories";
+            $edit_category_query = mysqli_query($connection, $query);
+
+            while($row = mysqli_fetch_assoc($edit_category_query)) {
+                $cat_title = $row['cat_title'];
+                $cat_id = $row['cat_id'];
+                echo "<option value=$cat_id>$cat_title</option>";
+            }
+                
+        ?>
+            
+        </select>
     </div>
     <div class="form-group">
         <input type="text" name="post_author" class="form-control" placeholder="Post Author">

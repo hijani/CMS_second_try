@@ -17,7 +17,7 @@
                 </li>
             </ul>
         </li>
-        <li id="short-links">
+        <li class="sidebar-nav-link">
             <a href="comments.php"><i class="fa fa-fw fa-comment"></i> Comments</a>
         </li>
     </ul>

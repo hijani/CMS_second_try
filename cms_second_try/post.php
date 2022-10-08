@@ -75,6 +75,9 @@
                             $query .= "now(), 'approved') ";
                             $add_comment_query = mysqli_query($connection, $query);
 
+                            $query = "UPDATE posts SET post_comment_count = post_comment_count + 1";
+                            $comment_count_query = mysqli_query($connection, $query);
+
                         }
                     ?>
                     <form method="post" action="">

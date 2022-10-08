@@ -18,7 +18,7 @@
 
         $query.= " VALUES ('$post_title', $post_category_id, ";
         $query.= "'$post_author', now(), '$post_image', ";
-        $query.= "'$post_content', '$post_tags', '$post_status') ";
+        $query.= "'$post_content', '$post_tags', 0, '$post_status') ";
         $add_post_query = mysqli_query($connection, $query);
 
         move_uploaded_file($post_image_temp, "../images/$post_image");

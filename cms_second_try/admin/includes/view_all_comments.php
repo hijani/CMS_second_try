@@ -33,7 +33,7 @@
             echo "<td>$comment_email</td>";
             echo "<td>$comment_content</td>";
             echo "<td>$comment_status</td>";
-            echo "<td>response</td>";
+            echo "<td><a href='comments.php?approve=$comment_id'>In Response To</a></td>";
             echo "<td><a href='comments.php?approve=$comment_id'>Approve</a></td>";
             echo "<td><a href='comments.php?unapprove=$comment_id'>Un-Approve</a></td>";
             echo "<td><a href='comments.php?delete=$comment_id'>Delete</a></td>";

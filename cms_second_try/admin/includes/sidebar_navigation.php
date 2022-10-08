@@ -20,8 +20,5 @@
         <li>
             <a href="comments.php"><i class="fa fa-fw fa-comment"></i> Comments</a>
         </li>
-        <li>
-            <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-        </li>
     </ul>
 </div>
